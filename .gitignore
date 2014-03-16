@@ -79,7 +79,8 @@ publish
 *.Publish.xml
 
 # NuGet Packages Directory
-packages
+# Disabled so I get the xUnit runner in source control for teamcity
+# packages
 
 # Windows Azure Build Output
 csx
