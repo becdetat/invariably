@@ -4,14 +4,20 @@ namespace Invariably
 {
     public static class Guard
     {
-        public static void For(Action<bool> condition)
+        public static void For(Func<bool> condition)
         {
-            throw new NotImplementedException();
+            if (!condition())
+            {
+                throw new NotImplementedException();
+            }
         }
 
-        public static void Against(Action<bool> condition)
+        public static void Against(Func<bool> condition)
         {
-            throw new NotImplementedException();
+            if (condition())
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
